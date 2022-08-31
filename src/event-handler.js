@@ -18,7 +18,7 @@ function EventHandler(common) {
 }
 EventHandler.prototype.logEvent = function(event) {
 
-    let attributes = event.ProductAction && event.ProductAction.ProductList ? {...event.EventAttributes, productList: event.ProductAction.ProductList} : event.EventAttributes;
+    let attributes = event.EventAttributes;
     singularSdk.event(event.EventName, attributes)
 
 };
